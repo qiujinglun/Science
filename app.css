@@ -1,7 +1,7 @@
 body {
     background-color: rgb(248, 213, 219);
-    /* height: 2000px; */
     margin: 0;
+    padding-top: 80px;
 }
 
 #flowcs {
@@ -11,10 +11,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     background-color: rgb(248, 213, 219);
-    /* 初始白色 */
     transition: background-color 0.5s linear;
-    /* 平滑過渡顏色 */
-
 }
 
 #textcolor {
@@ -24,135 +21,49 @@ body {
 
 .navbar-nav .nav-link {
     color: black;
-    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
     padding: 5px 10px;
+    transition: .3s;
 }
 
 .navbar-nav .nav-link:hover {
     background-color: #ec4899;
-    /* 粉色 */
     color: white;
 }
 
-/* 父容器 */
 .pic {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* 組間距離 */
     margin-top: 80px;
     margin-bottom: 40px;
 }
 
-/* 每個子項目 */
 .pic .item {
     display: flex;
-    text-align: center;
     align-items: center;
+    text-align: center;
 }
 
 .pic .item img {
-    width: 40%;
-}
-
-.pic .item h2 {
-    font-size: 40px;
-}
-
-.pt {
-    text-align: left;
-}
-
-.no-gutter-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 0;
-    /* 取消負邊距 */
-    margin-right: 0;
-    /* 取消負邊距 */
-}
-
-.no-gutter-row>[class*='col-'] {
-    padding-left: 15px;
-    /* 保留欄位左右間距 */
-    padding-right: 15px;
-}
-
-.lolli {
-    width: 20% !important;
+    width: 100%;
+    max-width: 300px;
     height: auto;
 }
 
-.colorred {
-    color: red;
-}
-
-@media (max-width:576px) {
-
-    .hide {
-        display: none;
-    }
-
-    .pic .item h2 {
-        font-size: 2vmin;
-    }
-
-    .col-6 {
-        width: 100% !important;
-        /* 強制寬度 100% */
-        max-width: 100% !important;
-    }
-
-    .lolli {
-        display: none;
-    }
-
-    .no-gutter-row>div {
-        order: 1;
-
-    }
-
-    /* 圖片永遠在下 */
-    .no-gutter-row>img {
-        order: 2;
-    }
-
-
+.pic .item h2 {
+    font-size: clamp(18px, 4vw, 40px);
 }
 
 @media (max-width:768px) {
 
-    .hide {
-        display: none;
-    }
-
-    .pic .item h2 {
-        font-size: 3vmin;
-    }
-
-    .col-6 {
-        width: 100% !important;
-        /* 強制寬度 100% */
-        max-width: 100% !important;
-    }
-
+    .hide,
     .lolli {
         display: none;
     }
 
-    .no-gutter-row>div {
-        order: 1;
-
+    .mobile-full {
+        width: 100%;
+        max-width: 100%;
     }
-
-    /* 圖片永遠在下 */
-    .no-gutter-row>img {
-        order: 2;
-    }
-
-}
-
-.container-fluid {
-    margin-top: 10px;
 }
