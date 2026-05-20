@@ -67,3 +67,8 @@ body {
         max-width: 100%;
     }
 }
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
